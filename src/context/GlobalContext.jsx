@@ -13,7 +13,6 @@ export const GlobalProvider = ({ children }) => {
     fetch('http://localhost:3000/historias')
       .then(response => response.json())
       .then(data => setHistorias(data))
-      .catch(error => console.error('Error loading data:', error));
   }, []);
 
   const updateHistoria = (updatedHistoria) => {
